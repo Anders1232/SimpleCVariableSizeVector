@@ -4,13 +4,13 @@
 struct vector
 {
 	void *elements;
-	int elementSize;
+	unsigned long int elementSize;
 	int numberOfElements;
 	int capacity;
 };
 typedef struct vector Vector;
 
-Vector* NewVector(int elementSize);
+Vector* NewVector(unsigned long int elementSize);
 int VectorAppendCopy(Vector *vec, void* element);
 int VectorAllocateOne(Vector *vec);
 void* VectorGetElement(Vector *vec, int position);
