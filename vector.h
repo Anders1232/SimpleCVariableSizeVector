@@ -1,3 +1,5 @@
+/*! \file */ 
+
 /*
 Simple C variable size vector, a simple variable size vector written in C
     Copyright (C) 2016-2017 Francisco Anderson Bezerra Rodrigues
@@ -15,20 +17,39 @@ Simple C variable size vector, a simple variable size vector written in C
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+
 #ifndef VECTOR_H
 #define VECTOR_H
 
+/*!
+	\brief The vector data structre.
+	
+	
+*/
 struct vector
 {
-	void *elements;
-	unsigned long int elementSize;
-	int numberOfElements;
-	int capacity;
+	void *elements;					/**< Pointer to the elements. */
+	unsigned long int elementSize;	/**< The size of one element of the vector. Informed in the vector creation. */
+	int numberOfElements;			/**< Hold the information of how many elements are in use at the moment. */
+	int capacity;					/**< Tells the actual reserved size of the vector. */
 };
 typedef struct vector Vector;
 
+/*!
+	\fn Vector* NewVector(unsigned long int elementSize)
+	\param elementSize The size of one element of the vector.
+	\return A new vector wich each element have size elementSize.
+	\brief Create a new vector
+	
+	A new vector is created, the size of each element is elementSize.
+	The best way is to use with sizeof, like \code Vector *vec= NewVector( sizeof ( int ) ); \endcode
+*/
+
 Vector* NewVector(unsigned long int elementSize);
+
 int VectorAppendCopy(Vector *vec, void* element);
+
 int VectorAllocateOne(Vector *vec);
 void* VectorGetElement(Vector *vec, int position);
 Vector* DeleteVector(Vector* vec);
