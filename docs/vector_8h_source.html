@@ -85,60 +85,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="vector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">Simple C variable size vector, a simple variable size vector written in C</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2016-2017 Francisco Anderson Bezerra Rodrigues</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    (at your option) any later version.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef VECTOR_H</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define VECTOR_H</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structvector.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvector.html">vector</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structvector.html#a8eced345863537167ebfcdf7a812516b">   41</a></span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="structvector.html#a8eced345863537167ebfcdf7a812516b">elements</a>;                 </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">   42</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">elementSize</a>;  </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">numberOfElements</a>;           </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structvector.html#a95bc684a8044cfc0e509861448908bf2">   44</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvector.html#a95bc684a8044cfc0e509861448908bf2">capacity</a>;                   </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">   46</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvector.html">vector</a> <a class="code" href="structvector.html">Vector</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="structvector.html">Vector</a>* <a class="code" href="vector_8h.html#ac8990860983f5a881df4534e5dafe39c">NewVector</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">elementSize</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vector_8h.html#a8de6d055263845dd5af9273fc6ccc04b">VectorAppendCopy</a>(<a class="code" href="structvector.html">Vector</a> *vec, <span class="keywordtype">void</span>* element);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vector_8h.html#a72072cc59f7dbd764e3b8e839510223a">VectorAllocateOne</a>(<a class="code" href="structvector.html">Vector</a> *vec);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="vector_8h.html#ad0a13db862b6087cab0add6b556d3581">VectorGetElement</a>(<a class="code" href="structvector.html">Vector</a> *vec, <span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structvector.html">Vector</a>* <a class="code" href="vector_8h.html#aa149f91e40e2c94f276c4b135e30317b">DeleteVector</a>(<a class="code" href="structvector.html">Vector</a>* vec);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structvector_html"><div class="ttname"><a href="structvector.html">vector</a></div><div class="ttdoc">The vector data structre. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00039">vector.h:39</a></div></div>
-<div class="ttc" id="structvector_html_a1a58020e66cb7ee75009ec565d162566"><div class="ttname"><a href="structvector.html#a1a58020e66cb7ee75009ec565d162566">vector::elementSize</a></div><div class="ttdeci">unsigned long int elementSize</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00042">vector.h:42</a></div></div>
-<div class="ttc" id="structvector_html_a1bc01770343d60bca1ea4599e3c8810c"><div class="ttname"><a href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">vector::numberOfElements</a></div><div class="ttdeci">int numberOfElements</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00043">vector.h:43</a></div></div>
-<div class="ttc" id="vector_8h_html_a8de6d055263845dd5af9273fc6ccc04b"><div class="ttname"><a href="vector_8h.html#a8de6d055263845dd5af9273fc6ccc04b">VectorAppendCopy</a></div><div class="ttdeci">int VectorAppendCopy(Vector *vec, void *element)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00059">vector.c:59</a></div></div>
-<div class="ttc" id="structvector_html_a95bc684a8044cfc0e509861448908bf2"><div class="ttname"><a href="structvector.html#a95bc684a8044cfc0e509861448908bf2">vector::capacity</a></div><div class="ttdeci">int capacity</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00044">vector.h:44</a></div></div>
-<div class="ttc" id="vector_8h_html_aa149f91e40e2c94f276c4b135e30317b"><div class="ttname"><a href="vector_8h.html#aa149f91e40e2c94f276c4b135e30317b">DeleteVector</a></div><div class="ttdeci">Vector * DeleteVector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00082">vector.c:82</a></div></div>
-<div class="ttc" id="structvector_html_a8eced345863537167ebfcdf7a812516b"><div class="ttname"><a href="structvector.html#a8eced345863537167ebfcdf7a812516b">vector::elements</a></div><div class="ttdeci">void * elements</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00041">vector.h:41</a></div></div>
-<div class="ttc" id="vector_8h_html_a72072cc59f7dbd764e3b8e839510223a"><div class="ttname"><a href="vector_8h.html#a72072cc59f7dbd764e3b8e839510223a">VectorAllocateOne</a></div><div class="ttdeci">int VectorAllocateOne(Vector *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00049">vector.c:49</a></div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Simple C variable size vector, a simple variable size vector written in C</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    Copyright (C) 2016-2017 Francisco Anderson Bezerra Rodrigues</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    (at your option) any later version.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef VECTOR_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define VECTOR_H</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structvector.html">   30</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvector.html">vector</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structvector.html#a8eced345863537167ebfcdf7a812516b">   32</a></span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="structvector.html#a8eced345863537167ebfcdf7a812516b">elements</a>;                 </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">   33</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">elementSize</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">numberOfElements</a>;           </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structvector.html#a95bc684a8044cfc0e509861448908bf2">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvector.html#a95bc684a8044cfc0e509861448908bf2">capacity</a>;                   </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvector.html">vector</a> <a class="code" href="structvector.html">Vector</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="structvector.html">Vector</a>* <a class="code" href="vector_8h.html#ac8990860983f5a881df4534e5dafe39c">NewVector</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structvector.html#a1a58020e66cb7ee75009ec565d162566">elementSize</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vector_8h.html#a8de6d055263845dd5af9273fc6ccc04b">VectorAppendCopy</a>(<a class="code" href="structvector.html">Vector</a> *vec, <span class="keywordtype">void</span> *element);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vector_8h.html#a72072cc59f7dbd764e3b8e839510223a">VectorAllocateOne</a>(<a class="code" href="structvector.html">Vector</a> *vec);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="vector_8h.html#ad0a13db862b6087cab0add6b556d3581">VectorGetElement</a>(<a class="code" href="structvector.html">Vector</a> *vec, <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<a class="code" href="structvector.html">Vector</a>* <a class="code" href="vector_8h.html#aa149f91e40e2c94f276c4b135e30317b">DeleteVector</a>(<a class="code" href="structvector.html">Vector</a>* vec);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structvector_html"><div class="ttname"><a href="structvector.html">vector</a></div><div class="ttdoc">The vector data structre. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00030">vector.h:30</a></div></div>
+<div class="ttc" id="structvector_html_a1a58020e66cb7ee75009ec565d162566"><div class="ttname"><a href="structvector.html#a1a58020e66cb7ee75009ec565d162566">vector::elementSize</a></div><div class="ttdeci">unsigned long int elementSize</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00033">vector.h:33</a></div></div>
+<div class="ttc" id="structvector_html_a1bc01770343d60bca1ea4599e3c8810c"><div class="ttname"><a href="structvector.html#a1bc01770343d60bca1ea4599e3c8810c">vector::numberOfElements</a></div><div class="ttdeci">int numberOfElements</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00034">vector.h:34</a></div></div>
+<div class="ttc" id="vector_8h_html_a8de6d055263845dd5af9273fc6ccc04b"><div class="ttname"><a href="vector_8h.html#a8de6d055263845dd5af9273fc6ccc04b">VectorAppendCopy</a></div><div class="ttdeci">int VectorAppendCopy(Vector *vec, void *element)</div><div class="ttdoc">Inserts a new element at the end of the vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00059">vector.c:59</a></div></div>
+<div class="ttc" id="structvector_html_a95bc684a8044cfc0e509861448908bf2"><div class="ttname"><a href="structvector.html#a95bc684a8044cfc0e509861448908bf2">vector::capacity</a></div><div class="ttdeci">int capacity</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00035">vector.h:35</a></div></div>
+<div class="ttc" id="vector_8h_html_aa149f91e40e2c94f276c4b135e30317b"><div class="ttname"><a href="vector_8h.html#aa149f91e40e2c94f276c4b135e30317b">DeleteVector</a></div><div class="ttdeci">Vector * DeleteVector(Vector *vec)</div><div class="ttdoc">Delete the vector and its elements. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00082">vector.c:82</a></div></div>
+<div class="ttc" id="structvector_html_a8eced345863537167ebfcdf7a812516b"><div class="ttname"><a href="structvector.html#a8eced345863537167ebfcdf7a812516b">vector::elements</a></div><div class="ttdeci">void * elements</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00032">vector.h:32</a></div></div>
+<div class="ttc" id="vector_8h_html_a72072cc59f7dbd764e3b8e839510223a"><div class="ttname"><a href="vector_8h.html#a72072cc59f7dbd764e3b8e839510223a">VectorAllocateOne</a></div><div class="ttdeci">int VectorAllocateOne(Vector *vec)</div><div class="ttdoc">Allocates space for at least one more element. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00049">vector.c:49</a></div></div>
 <div class="ttc" id="vector_8h_html_ac8990860983f5a881df4534e5dafe39c"><div class="ttname"><a href="vector_8h.html#ac8990860983f5a881df4534e5dafe39c">NewVector</a></div><div class="ttdeci">Vector * NewVector(unsigned long int elementSize)</div><div class="ttdoc">Create a new vector. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00023">vector.c:23</a></div></div>
-<div class="ttc" id="vector_8h_html_ad0a13db862b6087cab0add6b556d3581"><div class="ttname"><a href="vector_8h.html#ad0a13db862b6087cab0add6b556d3581">VectorGetElement</a></div><div class="ttdeci">void * VectorGetElement(Vector *vec, int position)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00067">vector.c:67</a></div></div>
+<div class="ttc" id="vector_8h_html_ad0a13db862b6087cab0add6b556d3581"><div class="ttname"><a href="vector_8h.html#ad0a13db862b6087cab0add6b556d3581">VectorGetElement</a></div><div class="ttdeci">void * VectorGetElement(Vector *vec, int position)</div><div class="ttdoc">Gets the element at informed position. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00067">vector.c:67</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 17 2017 13:45:48 for Simple C Variable Size Vector by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 20 2017 19:47:41 for Simple C Variable Size Vector by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -115,12 +115,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac8990860983f5a881df4534e5dafe39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new vector.  <a href="#ac8990860983f5a881df4534e5dafe39c">More...</a><br /></td></tr>
 <tr class="separator:ac8990860983f5a881df4534e5dafe39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8de6d055263845dd5af9273fc6ccc04b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a8de6d055263845dd5af9273fc6ccc04b">VectorAppendCopy</a> (<a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *vec, void *element)</td></tr>
+<tr class="memdesc:a8de6d055263845dd5af9273fc6ccc04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new element at the end of the vector.  <a href="#a8de6d055263845dd5af9273fc6ccc04b">More...</a><br /></td></tr>
 <tr class="separator:a8de6d055263845dd5af9273fc6ccc04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72072cc59f7dbd764e3b8e839510223a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a72072cc59f7dbd764e3b8e839510223a">VectorAllocateOne</a> (<a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *vec)</td></tr>
+<tr class="memdesc:a72072cc59f7dbd764e3b8e839510223a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates space for at least one more element.  <a href="#a72072cc59f7dbd764e3b8e839510223a">More...</a><br /></td></tr>
 <tr class="separator:a72072cc59f7dbd764e3b8e839510223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a13db862b6087cab0add6b556d3581"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ad0a13db862b6087cab0add6b556d3581">VectorGetElement</a> (<a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *vec, int position)</td></tr>
+<tr class="memdesc:ad0a13db862b6087cab0add6b556d3581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the element at informed position.  <a href="#ad0a13db862b6087cab0add6b556d3581">More...</a><br /></td></tr>
 <tr class="separator:ad0a13db862b6087cab0add6b556d3581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa149f91e40e2c94f276c4b135e30317b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#aa149f91e40e2c94f276c4b135e30317b">DeleteVector</a> (<a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *vec)</td></tr>
+<tr class="memdesc:aa149f91e40e2c94f276c4b135e30317b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the vector and its elements.  <a href="#aa149f91e40e2c94f276c4b135e30317b">More...</a><br /></td></tr>
 <tr class="separator:aa149f91e40e2c94f276c4b135e30317b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -134,29 +138,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vector_8h_source.html#l00046">46</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+<p>Definition at line <a class="el" href="vector_8h_source.html#l00037">37</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa149f91e40e2c94f276c4b135e30317b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a>* DeleteVector </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *&#160;</td>
-          <td class="paramname"><em>vec</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vector_8c_source.html#l00082">82</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ac8990860983f5a881df4534e5dafe39c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -178,28 +164,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new vector wich each element have size elementSize. A new vector is created, the size of each element is elementSize. The best way is to use with sizeof, like<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Vector *vec= NewVector( sizeof ( int ) ); </div>
+<dl class="section return"><dt>Returns</dt><dd>A new vector wich each element have size elementSize. A new vector is created, the size of each element is elementSize.<br />
+ If the Vector allocation fails, NULL is returned. <br />
+ The best way is to use with sizeof, like:<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Vector *vec= NewVector( sizeof ( int ) ); </div>
 </div><!-- fragment --> </dd></dl>
 
 <p>Definition at line <a class="el" href="vector_8c_source.html#l00023">23</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a72072cc59f7dbd764e3b8e839510223a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int VectorAllocateOne </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *&#160;</td>
-          <td class="paramname"><em>vec</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vector_8c_source.html#l00049">49</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 
 </div>
 </div>
@@ -227,7 +197,53 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Inserts a new element at the end of the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*vec</td><td>A pointer to the vector. </td></tr>
+    <tr><td class="paramname">*element</td><td>A pointer to the element wich value will be copied to the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the the position of the value passed as argument, with the new element at the end of the vector. Inserts a new element at the end of the vector, expanding the vector size if necessary.<br />
+ If the allocation fails, an error message is send to stderr and exit is called.<br />
+</dd></dl>
+<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;int newElementPosition= VectorAppendCopy( vec, &amp;value ); </div>
+</div><!-- fragment --><p> The example above inserts an element at the end of the vector and assigns to newElementPosition its position. </p>
+
 <p>Definition at line <a class="el" href="vector_8c_source.html#l00059">59</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72072cc59f7dbd764e3b8e839510223a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VectorAllocateOne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocates space for at least one more element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*vec</td><td>A pointer to the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the position in the vector allocated. May be used with VectorGetElement. Allocate space in the vector for at least one more element, expanding the vector size if necessary. The allocated position is uninitialized.<br />
+ If the allocation fails, an error message is send to stderr and exit is called.<br />
+ Its return value may be used with VectorGetElement.<br />
+ Example:<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Vector *vec= new Vector(sizeof(int));</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; *( (int*) VectorGetElement(vec, VectorAllocateOne(vec) ) = 2; </div>
+</div><!-- fragment --> The example above assigns 2 to the first position of the vector. The vector holds elements of type "int". </dd></dl>
+
+<p>Definition at line <a class="el" href="vector_8c_source.html#l00049">49</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 
 </div>
 </div>
@@ -255,14 +271,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the element at informed position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*vec</td><td>A pointer to the vector. </td></tr>
+    <tr><td class="paramname">position</td><td>The wanted vector position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the element of the vector at the position informed. Its return value may be used with VectorGetElement.<br />
+ Since the pointer to the position is returned, you may assign new values to the position using the returned pointer.<br />
+ Example 1:<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Vector *vec= new Vector(sizeof(int));</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; *( (int*) VectorGetElement(vec, VectorAllocateOne(vec) ) = 2; </div>
+</div><!-- fragment --> The example above assigns 2 to the first position of the vector. The vector holds elements of type "int".<br />
+ To assign values you may deference the pointer and then assign. Or use memcpy, declared at string.h. </dd></dl>
+
 <p>Definition at line <a class="el" href="vector_8c_source.html#l00067">67</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa149f91e40e2c94f276c4b135e30317b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a>* DeleteVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#a67df6442cbc09def7e2d82c71522e1ae">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete the vector and its elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*vec</td><td>A pointer to the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL is returned Deletes the vector and its elements, deallocating both. Example :<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Vector *vec= new Vector(sizeof(int));</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;DeleteVector(vec);</div>
+</div><!-- fragment --> </dd></dl>
+
+<p>Definition at line <a class="el" href="vector_8c_source.html#l00082">82</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 17 2017 13:45:48 for Simple C Variable Size Vector by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 20 2017 19:47:41 for Simple C Variable Size Vector by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
