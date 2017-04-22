@@ -25,7 +25,7 @@ Vector* NewVector(unsigned long int elementSize)
 	Vector *ret= malloc(sizeof(Vector));
 	if(NULL == ret)
 	{
-		fprintf(stderr, "[ERROR] Allocation Error\n");
+		fprintf(stderr, "[ERROR] Allocation Error at %s|%s:%d\n", __FILE__, __func__, __LINE__);
 		return NULL;
 	}
 	ret->elementSize= elementSize;
@@ -41,7 +41,7 @@ static void Resize(Vector * vec)
 	vec->elements= realloc(vec->elements, (vec->capacity) * (vec->elementSize));
 	if(NULL == vec-> elements)
 	{
-		fprintf(stderr, "[ERROR] Memory reallocation error\n");
+		fprintf(stderr, "[ERROR] Memory reallocation error at %s|%s:%d\n", __FILE__, __func__, __LINE__);
 		exit(1);
 	}
 }
@@ -73,7 +73,7 @@ void* VectorGetElement(Vector *vec, int position)
 */
 	if( (vec->numberOfElements) <= position)
 	{
-		fprintf(stderr, "[ERROR] Bad element access\n");
+		fprintf(stderr, "[ERROR] Bad element access at %s|%s:%d\n", __FILE__, __func__, __LINE__);
 		return NULL;
 	}
 	return ((char*)vec->elements)+ ( position*(vec->elementSize) );
